@@ -3,6 +3,8 @@ from config import EXAM_QUESTIONS
 from utils.welcome import welcome
 from utils.clear_screen import clear_terminal
 from utils.question_screen import question
+from utils.actions import handle_next, handle_prev, handle_submit
+
 clear_terminal()
 success = welcome(TERMINAL_WIDTH)
 
@@ -27,11 +29,11 @@ for q in EXAM_QUESTIONS:
     clear_terminal()
 
     if user_res == "N":
-        pass
+        handle_next(current_question, total_questions)
     if user_res == "P":
-        pass
+        handle_prev(current_question, total_questions)
     if user_res == "S":
-        pass
+        handle_submit(current_question, total_questions)
 
     valid_answer = ["1", "2", "3", "4"]
         
