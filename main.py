@@ -26,8 +26,16 @@ for q in EXAM_QUESTIONS:
     current_question += 1
     clear_terminal()
 
-    valid_input = ["1", "2", "3", "4"]
-    while user_res not in valid_input:
+    if user_res == "N":
+        pass
+    if user_res == "P":
+        pass
+    if user_res == "S":
+        pass
+
+    valid_answer = ["1", "2", "3", "4"]
+        
+    while user_res not in valid_answer:
         clear_terminal()
         print("Invalid answer, try again")
         user_res = question(
