@@ -1,7 +1,11 @@
+from config import EXAM_QUESTIONS
+from config import SUBJECT
+total_questions = len(EXAM_QUESTIONS)
+
 def welcome(TERMINAL_WIDTH):
     title = "COMPUTER BASED TEST PORTAL"
-    subject = "Subject: General Science"
-    timer =  "Time Allowed: 45 Minutes"
+    subject = f"Subject: {SUBJECT}"
+    timer =  f"Time Allowed: {total_questions} Minutes"
     instruction = "Press [ENTER] to begin"
 
     print("+" + "=" * (TERMINAL_WIDTH - 2) + "+")
